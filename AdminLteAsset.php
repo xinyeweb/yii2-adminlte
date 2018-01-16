@@ -16,15 +16,15 @@ class AdminLteAsset extends AssetBundle
 {
 
     public $css = [
-        'css/font-awesome.min.css',
-        'css/ionicons.min.css',
+        //'css/font-awesome.min.css',
+        //'css/ionicons.min.css',
         'css/AdminLTE.min.css',
         'css/monsterkit.css'
     ];
 
     public $js = [
         'js/app.min.js',
-        'plugins/slimScroll/jquery.slimscroll.min.js',
+        'js/plugins/slimScroll/jquery.slimscroll.min.js',
     ];
 
     public $depends = [
@@ -35,7 +35,8 @@ class AdminLteAsset extends AssetBundle
     public $skin = '_all-skins';
 
     public function init() {
-        $this->sourcePath = dirname(__FILE__) .DIRECTORY_SEPARATOR . 'assets';
+        //$this->sourcePath = dirname(__FILE__) .DIRECTORY_SEPARATOR . 'assets';
+		$this->sourcePath = '@vendor/almasaeed2010/adminlte/dist';
         // Append skin color file if specified
         if ($this->skin) {
             if (('_all-skins' !== $this->skin) && (strpos($this->skin, 'skin-') !== 0)) {
