@@ -19,7 +19,6 @@ class AdminLteAsset extends AssetBundle
         //'css/font-awesome.min.css',
         //'css/ionicons.min.css',
         'css/AdminLTE.min.css',
-        'css/monsterkit.css'
     ];
 
     public $js = [
@@ -30,6 +29,8 @@ class AdminLteAsset extends AssetBundle
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapPluginAsset',
+		'xinyeweb\adminlte\FontAwesomeAsset',
+		'xinyeweb\adminlte\XYAdminLteAsset',
     ];
 
     public $skin = '_all-skins';

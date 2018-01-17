@@ -12,7 +12,8 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-		"almasaeed2010/adminlte": "^2.4.0"
+		"almasaeed2010/adminlte": "^2.4.0",
+		"bower-asset/fontawesome": ">=4.6.3"
     },
     "autoload": {
         "psr-4": {
