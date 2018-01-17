@@ -18,11 +18,7 @@ class FontAwesomeAsset extends AssetBundle
     public $css = [
         'css/font-awesome.min.css'
     ];
-
-    public $js = [];
-
-    public $skin = '_all-skins';
-
+	
     public function init() {
         $this->sourcePath = '@bower/fontawesome';
 		$this->publishOptions['beforeCopy'] = function ($from, $to) {
