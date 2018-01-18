@@ -16,14 +16,11 @@ class AdminLteAsset extends AssetBundle
 {
 
     public $css = [
-        //'css/font-awesome.min.css',
-        //'css/ionicons.min.css',
         'css/AdminLTE.min.css',
     ];
 
     public $js = [
-        'js/app.min.js',
-        'js/plugins/slimScroll/jquery.slimscroll.min.js',
+        'js/adminlte.min.js',
     ];
 
     public $depends = [

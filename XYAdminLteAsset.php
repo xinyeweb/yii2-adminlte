@@ -19,9 +19,10 @@ class XYAdminLteAsset extends AssetBundle
         'css/monsterkit.css'
     ];
 
-    public $js = [];
-
-    public $skin = '_all-skins';
+    public $js = [
+        'js/slimScroll/jquery.slimscroll.min.js',
+        'js/app.min.js'
+    ];
 
     public function init() {
         $this->sourcePath = dirname(__FILE__) .DIRECTORY_SEPARATOR . 'assets';

@@ -19,7 +19,7 @@ class AdminLteIEAsset extends AssetBundle
 
     public $js = [
         'js/html5shiv.min.js',
-        'plugins/respond.min.js',
+        'js/respond.min.js',
     ];
 
     public $jsOptions = [
