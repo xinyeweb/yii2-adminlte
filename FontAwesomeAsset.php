@@ -9,7 +9,6 @@
 
 namespace xinyeweb\adminlte;
 
-use yii\base\Exception;
 use yii\web\AssetBundle;
 
 class FontAwesomeAsset extends AssetBundle
@@ -20,10 +19,11 @@ class FontAwesomeAsset extends AssetBundle
     ];
 	
     public function init() {
-        $this->sourcePath = '@bower/fontawesome';
-		$this->publishOptions['beforeCopy'] = function ($from, $to) {
-            return preg_match('%(/|\\\\)(fonts|css)%', $from);
-        };
+//        $this->sourcePath = '@bower/fontawesome';
+//		$this->publishOptions['beforeCopy'] = function ($from, $to) {
+//            return preg_match('%(/|\\\\)(fonts|css)%', $from);
+//        };
+        $this->sourcePath = dirname(__FILE__).DIRECTORY_SEPARATOR.'assets'.DIRECTORY_SEPARATOR.'font-awesome';
         parent::init();
     }
 }
