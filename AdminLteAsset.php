@@ -11,6 +11,7 @@ namespace xinyeweb\adminlte;
 
 use yii\base\Exception;
 use yii\web\AssetBundle;
+use yii\web\View;
 
 class AdminLteAsset extends AssetBundle
 {
@@ -22,7 +23,17 @@ class AdminLteAsset extends AssetBundle
 
     public $js = [
         'adminltejs/adminlte.min.js',
-        'xy/js/app.min.js'
+        'xy/js/app.min.js',
+        [
+            'xy/js/html5shiv.min.js',
+            'condition' => 'It IE9',
+            'position' => View::POS_HEAD
+        ],
+        [
+            'xy/js/respond.min.js',
+            'condition' => 'It IE9',
+            'position' => View::POS_HEAD
+        ]
     ];
 
     public $depends = [
