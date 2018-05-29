@@ -16,31 +16,31 @@ class AdminLteAsset extends AssetBundle
 {
 
     public $css = [
-        'css/AdminLTE.min.css',
+        'adminlte/css/AdminLTE.min.css',
+        'xy/css/monsterkit.css'
     ];
 
     public $js = [
-        'js/adminlte.min.js',
+        'adminltejs/adminlte.min.js',
+        'xy/js/app.min.js'
     ];
 
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapPluginAsset',
-		'xinyeweb\adminlte\FontAwesomeAsset',
-		'xinyeweb\adminlte\XYAdminLteAsset',
+        'xinyeweb\adminlte\AdminLtePluginAsset',
     ];
 
     public $skin = '_all-skins';
 
     public function init() {
-        //$this->sourcePath = dirname(__FILE__) .DIRECTORY_SEPARATOR . 'assets';
-		$this->sourcePath = '@vendor/almasaeed2010/adminlte/dist';
-        // Append skin color file if specified
+        $this->sourcePath = dirname(__FILE__) .DIRECTORY_SEPARATOR . 'assets';
+//		$this->sourcePath = '@vendor/almasaeed2010/adminlte/dist';
         if ($this->skin) {
             if (('_all-skins' !== $this->skin) && (strpos($this->skin, 'skin-') !== 0)) {
                 throw new Exception('Invalid skin specified');
             }
-            $this->css[] = sprintf('css/skins/%s.min.css', $this->skin);
+            $this->css[] = sprintf('adminlte/css/skins/%s.min.css', $this->skin);
         }
 
         parent::init();

@@ -1,0 +1,24 @@
+/*
+    上传文件框
+*/
+.inputfile {  width: 0.1px;  height: 0.1px;  opacity: 0;  overflow: hidden;  position: absolute;  z-index: -1;  }
+.inputfile + label { margin:0; padding:6px 10px; border-radius: 4px; font-size: 14px; color: white;  background-color: #d3394c;  display: inline-block;  cursor: pointer; /* "hand" cursor */ }
+.inputfile:focus + label, .inputfile + label:hover {  background-color: #722040;  }
+.inputfile + label i{ margin-right: 6px; }
+/*
+    弹出框居中
+*/
+.vertical-alignment-helper { display: table; height: 100%; width: 100%; pointer-events: none; }
+.vertical-align-center { /* To center vertically */  display: table-cell; vertical-align: middle; pointer-events: none; }
+.modal-content { /* Bootstrap sets the size of the modal in the modal-dialog class, we need to inherit it */  width: inherit; height: inherit; /* To center horizontally */  margin: 0 auto; pointer-events: all; }
+.modal {z-index: 10001}
+/*
+    手机版优化
+*/
+.navbar .header-logo{ display: none; }
+@media (max-width: 767px){
+    .skin-yellow .main-header .logo{ display: none;}
+    .fixed .content-wrapper, .fixed .right-side , .main-sidebar, .left-side{ padding-top: 50px;}
+    .content-header > .breadcrumb{ display: none;}
+    .navbar .header-logo{ display: block; font-size: 18px; text-align: center; color: #FFF; position: absolute; left: 50px; right: 50px; line-height: 50px; }
+}
