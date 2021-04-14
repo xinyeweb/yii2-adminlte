@@ -25,6 +25,7 @@ class AdminLteAsset extends AssetBundle
 
     public $js = [
         'js/app.min.js',
+        'js/demo.js',
         'plugins/slimScroll/jquery.slimscroll.min.js',
         'plugins/chartjs/Chart.min.js',
         [
